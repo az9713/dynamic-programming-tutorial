@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1a1a2e;
+  --color-ink-light: #2d2d44;
+  --color-ink-muted: #6b7280;
+  --color-parchment: #faf8f5;
+  --color-parchment-dark: #f0ece4;
+  --color-accent: #e8590c;
+  --color-accent-light: #ff8a4c;
+  --color-accent-dark: #c2410c;
+  --color-teal: #0d9488;
+  --color-teal-light: #2dd4bf;
+  --color-teal-dark: #0f766e;
+  --color-violet: #7c3aed;
+  --color-violet-light: #a78bfa;
+  --color-gold: #d97706;
+  --color-gold-light: #fbbf24;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-cell-computing: #fef3c7;
+  --color-cell-done: #d1fae5;
+  --color-cell-backtrack: #fef9c3;
+  --color-surface-dark: #0f172a;
+  --color-surface-dark-alt: #1e293b;
+  --color-surface-dark-card: #1e293b;
+  --color-text-dark: #e2e8f0;
+  --color-text-dark-muted: #94a3b8;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  .dp-cell {
+    @apply inline-flex items-center justify-center w-12 h-12 border border-ink/10 rounded-md text-sm font-mono transition-all duration-300 text-ink;
+  }
+
+  .dark .dp-cell {
+    @apply border-white/15 text-text-dark;
+  }
+
+  .dp-cell-computing {
+    @apply bg-amber-400 ring-2 ring-accent scale-110 font-bold text-ink;
+  }
+
+  .dp-cell-done {
+    @apply bg-emerald-400 text-ink font-semibold;
+  }
+
+  .dp-cell-backtrack {
+    @apply bg-yellow-300 ring-2 ring-gold shadow-lg shadow-gold/20 text-ink font-bold;
+  }
+}
+
+@keyframes pulse-cell {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(217, 119, 6, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(217, 119, 6, 0.6); }
+}
+
+.animate-pulse-cell {
+  animation: pulse-cell 0.6s ease-in-out;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
