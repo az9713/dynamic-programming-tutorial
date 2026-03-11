@@ -321,6 +321,26 @@ Vercel will build and deploy on every push to the main branch automatically.
 
 ---
 
+## Reusable Skill: Build Your Own STEM Tutorial
+
+This project was built using a reusable **Claude Code skill** included at [`.claude/skills/stem-tutorial.md`](.claude/skills/stem-tutorial.md). The skill codifies the entire development workflow into a repeatable 7-phase process that can generate an interactive tutorial platform for **any STEM topic** — not just dynamic programming.
+
+**What it does:** Given a STEM topic and academic level (BS, MS, PhD, or PostDoc), the skill guides Claude Code through scoping, content extraction, curriculum design, parallel agent-based implementation, integration, validation, and deployment. It produces a full Next.js web platform with animated visualizations, an AI tutor, quizzes, exams, coding homework, and progress tracking — all tailored to the specified academic level.
+
+**Level-aware features:**
+- **BS/MS** — Step-by-step animations, quizzes, coding exercises, patient AI tutor
+- **PhD** — Adds a research stage (literature mapping, technique inventory, open problem identification), proof stepper, paper reader, research advisor AI persona
+- **PostDoc** — Adds cross-domain bridges, notation audits across fields, colleague-mode AI tutor, "apply to your domain" exercises
+
+**How to use it:** Copy `.claude/skills/stem-tutorial.md` into any project's `.claude/skills/` directory. Then tell Claude Code: *"Build an interactive tutorial on [topic] at the [level] level."* The skill takes over from there.
+
+**Example prompts:**
+- *"Build a tutorial on graph algorithms at the BS level using my lecture notes in `./notes/`"*
+- *"Create a PhD-level tutorial on quantum error correction codes"*
+- *"Build a PostDoc-level tutorial on variational inference for someone coming from physics"*
+
+---
+
 ## License
 
 MIT — see [LICENSE](LICENSE) for details.
