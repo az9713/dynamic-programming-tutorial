@@ -2,7 +2,7 @@
 
 A full-featured, web-based course platform for learning dynamic programming from first principles. Work through 10 carefully ordered problems with animated DP table visualizations, an AI tutor sidebar, per-problem quizzes, timed exams, coding homework with AI grading, and a progress dashboard — all without signing up or touching a database.
 
-https://github.com/az9713/dynamic-programming-tutorial/assets/VIDEO_PLACEHOLDER/dp_demo.mp4
+https://github.com/user-attachments/assets/28fde99a-edb8-4bc9-91b8-a325748d4870
 
 > **Requires an [OpenRouter](https://openrouter.ai/) API key** for AI features (tutor chat, homework grading, AI-generated quizzes). Get a free key at [openrouter.ai/keys](https://openrouter.ai/keys) — it starts with `sk-or-`. Set it in `.env.local` or paste it on the Settings page. The visualizer, quizzes, and exams work without a key.
 
